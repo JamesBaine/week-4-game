@@ -3,18 +3,23 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Crystals Collecter</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+	<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
+	</script>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	<div class="container col-sm-12">
 
-		<div class="row col-sm-8 jumbotron">
+		<div class="row col-sm-8 pt-6 rounded my-3">
 			<h1>CrystalsCollecter!</h1>
 		</div>
 	
-		<div class="row col-sm-8 panel panel-default">
+		<div id="directions" class="row col-sm-8 p-3 rounded">
 
 			<p>You will be given a random number at the start of the game.</p>
 			
@@ -30,15 +35,15 @@
 	
 		<div class="row col-sm-8 px-0 my-3">	
 		
-			<div id="field" class="col-sm-7 panel panel-default mr-3">
+			<div id="field" class="panel panel-default p-3 rounded">
 					
-					<a id="random-num"></a>
-		
-					Random Number
-		
+					<a id="result"></a>
+
+					<a id="target-num"></a>
+
 			</div>
 		
-			<div id="score" class="col-sm-4 panel panel-default">
+			<div id="record" class="panel panel-defaul p-3 rounded">
 	
 				<p>Wins:
 					<a id="wins"></a>
@@ -47,27 +52,30 @@
 				<p>Losses:
 					<a id="losses"></a>
 				</p>
+
+				
 		
 			</div>
 		
 		</div>
 		
-		<div id="crystals" class="row col-sm-6 bg-info text-center p-0">
-			
-		<div id="panel" class="panel-body">
+		<div id="crystals" class="row col-sm-8"></div>
 
-			<img src="assets/images/purple.jpg" class="purple gem col-sm-3 my-3 p-0">
-		
-			<img src="assets/images/red.jpg" class="red gem col-sm-3 p-0 mx-3">
-		
-			<img src="assets/images/blue.jpg" class="blue gem col-sm-3 p-0 mr-3">
-		
-			<img src="assets/images/yellow.jpg" class="yellow gem col-sm-3 p-0">
+		<div id="scoreboard" class="row col-sm-6 panel panel-default my-3 pt-3 rounded">
 
+		
+
+			<p>Your total score:
+
+				<a id="score"></a>
+
+			</p>
+
+		
 		</div>
 
 	</div>
-</div>
+
 </body>
-<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+
 </html>

@@ -1,21 +1,74 @@
-.gem {
-	width: 20%;
-	height: auto;
+* {
+	box-sizing: border-box;
+	justify-content: center;
+}
+
+body {
+	background-image: url("../images/wov.png");
+	font-family: 'Slabo 27px', serif;
+	
+}
+
+#crystals img {
+	width: 80px;
+	height: 80px;
 	border: 1px solid white;
+	border-radius: 15px;
+	margin: 10px;
+}
+
+
+
+#crystals {
+	background-color: #8089cc;
 	border-radius: 15px;
 }
 
-#panel {
-	background-color: #b2dfdb;
+#record {
+	background-color: #eceff1;
+	width: 39%;
+	font-size: 2em;
+}
+
+#directions {
+	color: white;
+	background-color: #8089cc;
+	justify-content: left;
 }
 
 #field {
-	background-color: rgba(255, 235, 59, 0.3);
-}
-
-#score {
 	background-color: #eceff1;
+	width: 59%;
+	margin-right: 2%;
+	text-align: center;
+}
+
+.container {
+	width: 90%;
+}
+
+#scoreboard {
+	background-color: #eceff1;
+	justify-content: left;
+	font-size: 2em;
+
+}
+
+#target-num {
+	font-size: 3em;
+	display: block;
+}
+
+.rounded {
+	border-radius: 15px;
+}
+
+#result {
+	font-size: 3em;
+	display: block;
 }
 
 
-
+#target-num, #result {
+	height: 50%;
+} 
