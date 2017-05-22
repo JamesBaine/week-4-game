@@ -9,7 +9,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous">
 	</script>
 	<script type="text/javascript" src="assets/javascript/game.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -46,11 +46,11 @@
 			<div id="record" class="panel panel-defaul p-3 rounded">
 	
 				<p>Wins:
-					<a id="wins"></a>
+					<a id="wins" class="pl-2"></a>
 				</p>
 	
 				<p>Losses:
-					<a id="losses"></a>
+					<a id="losses" class="pl-2"></a>
 				</p>
 
 				
@@ -61,16 +61,19 @@
 		
 		<div id="crystals" class="row col-sm-8"></div>
 
-		<div id="scoreboard" class="row col-sm-6 panel panel-default my-3 pt-3 rounded">
+		<div id="scoreboard" class="row col-sm-8 panel panel-default my-3 pt-3 rounded">
 
 		
-
+			<div id="box">
 			<p>Your total score:
 
 				<a id="score"></a>
 
 			</p>
 
+			</div>
+		
+			<button id="new-game" class="btn mb-3">NEW GAME</button>
 		
 		</div>
 

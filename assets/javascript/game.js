@@ -8,9 +8,14 @@ $("#losses").text(losses);
 
 var crystals = ["assets/images/purple.jpg", "assets/images/red.jpg", "assets/images/blue.jpg", "assets/images/yellow.jpg"]
 
-newCrys();
 
-newGame();
+$("#new-game").on("click", function(){
+
+	newGame();
+
+});
+
+newCrys();
 
 
 	function newCrys () {
@@ -59,6 +64,8 @@ newGame();
 
 	function newGame() {
 
+		$("#new-game").hide();
+
 		score = 0;
 
 
@@ -92,8 +99,8 @@ newGame();
 			console.log(wins);
 			$("#wins").text(wins);
 			$("#crystals").empty();
+			$("#new-game").show();
 			newCrys();
-			newGame();
 		
 		} else if ( score > targetNum ) {
 
@@ -102,8 +109,8 @@ newGame();
 			console.log(losses);
 			$("#losses").text(losses);
 			$("#crystals").empty();
+			$("#new-game").show();
 			newCrys();
-			newGame();
 
 		}
 
