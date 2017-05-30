@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+// Indentation needed - communicates nesting within the above function
 var score = 0;
 var wins = 0;
 var losses = 0;
@@ -10,18 +11,20 @@ var crystals = ["assets/images/purple.jpg", "assets/images/red.jpg", "assets/ima
 
 
 $("#new-game").on("click", function(){
-
+        // Indentation is usually 2–4 spaces. Keep consistent formatting.
 	newGame();
 
-});
+});	
+// Moving newGame function up to this line helps those reading your code more easily understand whats happening.
 
 newCrys();
 
-
+// <--- Formatting: this is a global/top-level function so it should sit flush-left.
 	function newCrys () {
 
 		var numbers = [];
-
+		
+		// Nice use of while loop here to setup random #'s
 		while ( numbers.length < 4) {
 
 			var randomNum = Math.floor(Math.random() * 12 ) + 1;
@@ -46,10 +49,24 @@ newCrys();
 
 		}
 
+		// You'll want to remove console.log's in production
 		console.log(numbers);
-
+		//Nice job setting up your img elements here programmatically rather than one by one. 
 		for ( i = 0; i < numbers.length; i++ ) {
 
+			// the jQuery attr supports passing an object of key/value pairs to it, like so
+			// attr({
+		        //   'data-num': numbers[i],
+			//   src: crystals[i],
+			//   alt: 'crystal'
+			// })
+			//
+			// jQuery also supports chaining, so you could rewrite this as:
+			// cryImg.attr({
+			//   'data-num': numbers[i],
+			//   src: crystals[i],
+			//   alt: 'crystal'
+		        // }).addClass('gem')
 			var cryImg = $("<img>");
 			cryImg.attr("data-num", numbers[i]);
 			cryImg.attr("src", crystals[i]);
